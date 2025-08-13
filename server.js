@@ -18,6 +18,14 @@ app.use(cors({
 app.use("/api/auth", authRoutes);
 app.use("/api/generations", generationRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Backend is running.");
+});
+
+app.get("/api", (req, res) => {
+    res.send("Backend API is running.");
+});
+
 app.listen(process.env.PORT || 5000, () => {
     console.log(`🚀 Server running on port ${process.env.PORT || 5000}`)
 })
