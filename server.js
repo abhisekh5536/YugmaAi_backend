@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: process.env.FRONTEND_URL || 'https://yugma-ai.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
